@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Sample Santander</string>
+    <string name="name_user">Olá, Ingrid</string>
+    <string name="ag_user">Ag 1020</string>
+    <string name="conta_user">Cc 010204-8</string>
+    <string name="txt_saldo_disponivel">Saldo disponível</string>
+    <string name="valor_saldo">R$ 1.324,64</string>
+    <string name="txt_extrato">Ver extrato</string>
+    <string name="text_pagar">Pagar</string>
+    <string name="txt_recarga">Recarga</string>
+    <string name="txt_cart_o_final">Cartão final</string>
 </resources>
