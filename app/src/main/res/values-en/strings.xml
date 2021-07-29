@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sample Santander</string>
+    <string name="name_user">Hi,</string>
+    <string name="txt_cart_o_final">Final Card</string>
+    <string name="txt_saldo_disponivel">Balance Available</string>
+    <string name="text_pagar">Pay</string>
+    <string name="txt_extrato">View Extract</string>
+    <string name="saldo_limite">Balance + Limit</string>
+    <string name="transferir">Transfer</string>
+    <string name="txt_recarga">Recharge</string>
+</resources>

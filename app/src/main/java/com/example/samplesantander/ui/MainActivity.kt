@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.example.samplesantander.R
+import com.example.samplesantander.data.Conta
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,16 +20,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(findViewById(R.id.toolbar))
-
+        buscarContaCliente()
         mainViewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+    }
+
+    private fun buscarContaCliente() {
         mainViewModel.buscarContaCliente().observe(this, Observer { result ->
-            findViewById<TextView>(R.id.tv_agencia).text = result.agencia
-            findViewById<TextView>(R.id.tv_conta_corrente).text = result.numero
-            findViewById<TextView>(R.id.txt_valor_saldo).text = result.saldo
-            findViewById<TextView>(R.id.tv_limite).text = result.limite
-            findViewById<TextView>(R.id.tv_usuario).text = result.cliente.nome
-            findViewById<TextView>(R.id.txt_cartao_numero).text = result.cartao.numeroFinal
+            bindOnView(result)
         })
+    }
+
+    private fun bindOnView(conta: Conta) {
+        findViewById<TextView>(R.id.tv_agencia).text = conta.agencia
+        findViewById<TextView>(R.id.tv_conta_corrente).text = conta.numero
+        findViewById<TextView>(R.id.txt_valor_saldo).text = conta.saldo
+        findViewById<TextView>(R.id.tv_limite).text = conta.limite
+        findViewById<TextView>(R.id.tv_usuario).text = conta.cliente.nome
+        findViewById<TextView>(R.id.txt_cartao_numero).text = conta.cartao.numeroFinal
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
