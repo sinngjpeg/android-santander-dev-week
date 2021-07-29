@@ -7,7 +7,7 @@ import com.example.samplesantander.data.Conta
 class FakeData {
     fun getLocalData(): Conta {
         val cliente = Cliente("Ingrid")
-        val cartao = Cartao("4125455854")
+        val cartao = Cartao("4125455854", "854")
         val conta = Conta(
             "4456555-7",
             "420-8",
